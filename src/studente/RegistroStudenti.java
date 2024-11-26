@@ -10,20 +10,15 @@ public class RegistroStudenti {
 
     public void AggiungiStudente(Studente nuovoStudente) {
 
-        for (int i = 0; i < arrayStudenti.length; i++) {
-
-            if (arrayStudenti[i] == null) {
-                this.arrayStudenti[i] = nuovoStudente;
-                nextElementNull++;
-                break;
-            }
-
+        if ( this.nextElementNull < this.arrayStudenti.length ) {
+            this.arrayStudenti[nextElementNull] = nuovoStudente;
+            this.nextElementNull++;
         }
 
     }
 
     public void StampaRegistro() {
-        if (nextElementNull == 0)
+        if (this.nextElementNull == 0)
             System.out.println("Il registro è vuoto");
         else {
             for (int i = 0; i < nextElementNull; i++) {
