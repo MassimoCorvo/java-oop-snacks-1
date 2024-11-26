@@ -22,7 +22,7 @@ public class RegistroStudenti {
             System.out.println("Il registro è vuoto");
         else {
             for (int i = 0; i < nextElementNull; i++) {
-                arrayStudenti[i].StampaIdentita();
+                this.arrayStudenti[i].StampaIdentita();
             }
         }
     }

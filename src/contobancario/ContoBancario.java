@@ -20,7 +20,7 @@ public class ContoBancario {
 
     public void Prelievo(int soldiDaPrelevare){
 
-        if(soldiDaPrelevare > 0)
+        if(soldiDaPrelevare > 0 && this.saldoConto >= soldiDaPrelevare)
         this.saldoConto -= soldiDaPrelevare;
 
     }
